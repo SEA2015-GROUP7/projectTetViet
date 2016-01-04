@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name_lib">VappSmart</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_ads_1_">Ads_1_Activity</string>
+    <string name="title_activity_ads_2_">Ads_2_Activity</string>
+   
+    <!--  -->
+
+    <string name="title_freeApp">More Free App</string>
+    <string name="title_exitApp">Exit App !</string>
+    <string name="btn_exit">Exit app</string>
+    <string name="btn_back">Back</string>
+    <string name="msg_exit">Please take a moment to review these Great Apps, Thank for your support!\n♥♥♥</string>
+    <string name="msg_review_exit">Please take a moment to review these Great Apps, Thank for your support!\n♥♥♥</string>
+    <string name="btn_no">No</string>
+    <string name="btn_moreApp">Free App</string>
+    <!--  -->
+    <string name="btn_download">Download</string>
+    <string name="btn_get_it">Get it!</string>
+    <string name="btn_late">Later</string>
+    <string name="msg_download_freeapp">Download FREE app from Google Play!♥♥♥</string>
+    <string name="title_recomentApp">Recommended Apps</string>
+	<string name="str_update">Update new version</string>
+	<string name="btn_update">Update</string>
+	<!-- 10-9-14 -->
+	<string name="title_vapp">Recommended for You</string>
+	<string name="title_rate_app">Thank you</string>
+	<string name="btn_rate_5">Rate 5 ★</string>
+    <string name="btn_no_rate">No :(</string>
+    <string name="confirm_exit_app">Are you sure you want to exit the application?</string>
+    <string name="share_app_title">"Let's try the Cool APP"</string>
+    <string name="share_app_message">"Hi,I'm using %s developed by Vapp Smart, let's try the Cool APP"</string>
+    <string name="btn_send_email">Send Email</string>
+    <!--  -->
+    <string name="btn_setting">Settings</string>
+    
+    
+</resources>

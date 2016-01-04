@@ -1,0 +1,23 @@
+<resources>
+
+    <integer name="exit_num_cols">2</integer>
+    
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="gradient_radius">250dp</dimen>
+    <dimen name="dialog_exit_app_width">300dp</dimen>
+    <dimen name="grid_exit_app_width">230dp</dimen>
+    <dimen name="h_title_exit_dialog">50dp</dimen>
+    <!-- sliding menu -->
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
+    <dimen name="icon_app_menu_right">50dp</dimen>
+    <!-- dialog exit app -->
+    <dimen name="text_exit_message">18sp</dimen>
+    <dimen name="text_exit_button">15sp</dimen>
+    <dimen name="h_button_layout">50dp</dimen>
+    <dimen name="h_button_layout_mar">10dp</dimen>
+
+</resources>
