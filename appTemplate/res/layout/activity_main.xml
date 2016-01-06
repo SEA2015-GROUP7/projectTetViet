@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flash_bg_img"
+    tools:context=".FreeApp_Activity" >
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:columnWidth="100dp"
+        android:fastScrollEnabled="true"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:layoutAnimation="@anim/layout_random_fade"
+        android:numColumns="2"
+        android:padding="3dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="3dp" />
+
+</RelativeLayout>

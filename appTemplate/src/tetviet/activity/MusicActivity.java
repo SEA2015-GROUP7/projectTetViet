@@ -19,7 +19,7 @@ import org.json.JSONObject;
 
 import com.sea.tetviet.R;
 
-public final class MainActivity extends Activity {
+public final class MusicActivity extends Activity {
     private MSharedPreferences mSharedPreferences;
     private Context mContext;
 
