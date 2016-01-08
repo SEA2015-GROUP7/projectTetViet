@@ -10,15 +10,47 @@
     <string name="title_activity_ads_2_">Ads_2_Activity</string>
    
     <!--  -->
+    <!-- sms -->
+    <string name="title_activity_sms_detail">Chi Tiết</string>
+    <string name="string_na">n/a</string>
+    <string name="btn_sms_list">Xem Tiếp</string>
+    <string name="title_chuc_tet">Chúc Tết</string>
+    <string name="btn_sms">SMS</string>
+    <string name="btn_email">Email</string>
+    <string name="btn_fb">Facebook</string>
+    <string name="title_activity_vertical_list_sms">VerticalListSms</string>
+    <string name="btn_co_dau">Tiếng Việt có dấu</string>
+    <string name="btn_khong_dau">Tiếng Việt không dấu</string>
+    <string name="title_lovesms_setting">Cài đặt</string>
+    <string name="method_spinner">Lựa chọn phương thức</string>
+    <string name="category_spinner">Lựa chọn chủ đề</string>
+    
+     <string name="btn_bookmark">Lưu vị trí hiện tại</string>
+    <string name="btn_no_bookmark">Không lưu, thoát.</string>
+    <string name="btn_like">Yêu thích</string>
+    <string name="btn_copy">Copy</string>
+     <!-- widget setting -->
+     <string name="btn_sms_detail_back">Quay lại</string>
+    <string name="btn_oke">Xong</string>
+    <string name="title_send_type">Kiểu gửi tin</string>
+    <string name="title_show_type">Chủ đề tin</string>
+    <string name="title_bg_widget_type">Ảnh nền widget</string>
+    <string name="toast_send_success">Tin nhắn của bạn đã được post lên wall</string>
+    <string name="toast_tip">Lựa chọn bạn bè để tag cùng</string>
+    <!-- exit dialog -->
+    <string name="btn_exit">Thoát</string>
+    <string name="btn_back">Bỏ qua</string>
+    <string name="btn_no">Không</string>
+    <string name="btn_moreApp">Ứng dụng miễn phí</string>
+    <string name="msg_exit">Bạn có muốn thoát ứng dụng ?</string>
+    <string name="msg_exit_function">Bạn có muốn thoát chức năng này ?</string>
+    <string name="msg_exit_morefree">Chọn Ứng dụng miễn phí để tải thêm các ứng dụng, tiện ích phong phú khác</string>
 
     <string name="title_freeApp">More Free App</string>
     <string name="title_exitApp">Exit App !</string>
-    <string name="btn_exit">Exit app</string>
-    <string name="btn_back">Back</string>
-    <string name="msg_exit">Please take a moment to review these Great Apps, Thank for your support!\n♥♥♥</string>
+    
     <string name="msg_review_exit">Please take a moment to review these Great Apps, Thank for your support!\n♥♥♥</string>
-    <string name="btn_no">No</string>
-    <string name="btn_moreApp">Free App</string>
+    
     <!--  -->
     <string name="btn_download">Download</string>
     <string name="btn_get_it">Get it!</string>

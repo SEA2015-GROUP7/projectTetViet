@@ -11,8 +11,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import tetviet.adapter.PhotosAdapter;
+import tetviet.utils.DataBaseManager;
 import tetviet.utils.MSharedPreferences;
 
 import org.json.JSONObject;
@@ -21,16 +24,19 @@ import com.sea.tetviet.R;
 
 public final class MainActivity extends Activity {
     private MSharedPreferences mSharedPreferences;
-    private Context mContext;
-
+    public static Context mContext;
+    PhotosAdapter eventAdapter;
+    GridView gridView;
+    public static DataBaseManager mDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = this;
         mSharedPreferences = MSharedPreferences.getInstance(mContext);
-
+        mDB = DataBaseManager.instance();
         initView();
+        
 
         setStatusBarColor();
     }
@@ -43,7 +49,7 @@ public final class MainActivity extends Activity {
 
 
     private void initView(){
-       
+    	gridView = (GridView) findViewById(R.id.grid);
     }
 
     private void setStatusBarColor(){

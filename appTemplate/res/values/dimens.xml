@@ -20,4 +20,30 @@
     <dimen name="h_button_layout">50dp</dimen>
     <dimen name="h_button_layout_mar">10dp</dimen>
 
+    <!-- sms -->
+    <dimen name="weather_conner">40dp</dimen>
+    <dimen name="w_btn_icon_menu">70dp</dimen>
+    <dimen name="h_btn_icon_menu">70dp</dimen>
+    <dimen name="h_thumb">50dp</dimen>
+    <dimen name="w_thumb">50dp</dimen>
+    <dimen name="h_btn_sound">40dp</dimen>
+    <dimen name="w_btn_sound">40dp</dimen>
+
+    <!-- item sms -->
+    <dimen name="item_sms_content">16sp</dimen>
+    <dimen name="btn_sms_list">20sp</dimen>
+    <dimen name="h_btn_sms_list">50dp</dimen>
+    <dimen name="w_btn_sms_list">190sp</dimen>
+    <dimen name="h_title_sms_cate">60dp</dimen>
+    <dimen name="w_title_sms_cate">240sp</dimen>
+    <!--  -->
+    <dimen name="h_btn_item_sms">40dp</dimen>
+    <dimen name="w_btn_item_sms">100dp</dimen>
+    <dimen name="margin_lr_btn_item_sms">10dp</dimen>
+    <dimen name="btn_item_sms_text_size">14sp</dimen>
+    <dimen name="btn_item_sms_text_size_small">12sp</dimen>
+    <!-- widget setting -->
+    <dimen name="mar_setting_layout">5dp</dimen>
+<!--  -->
+<dimen name="h_btn_item_sms_top">25dp</dimen>
 </resources>

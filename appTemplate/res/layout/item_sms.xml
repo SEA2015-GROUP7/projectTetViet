@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sms"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_d" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_sms_item_btn"
+        android:layout_marginBottom="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_SMSContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/string_na"
+                android:textColor="#ffde8a"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/item_sms_content"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layout_sms_item_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/buttonShare"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/h_btn_item_sms"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/margin_lr_btn_item_sms"
+            android:layout_marginRight="@dimen/margin_lr_btn_item_sms"
+            android:layout_weight="1"
+            android:background="@drawable/indi_btn_detail"
+            android:gravity="center"
+            android:text="@string/btn_fb"
+            android:textColor="#ffde8a"
+            android:textSize="@dimen/btn_item_sms_text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSendSMS"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/h_btn_item_sms"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/margin_lr_btn_item_sms"
+            android:layout_marginRight="@dimen/margin_lr_btn_item_sms"
+            android:layout_weight="1"
+            android:background="@drawable/indi_btn_detail"
+            android:gravity="center"
+            android:text="@string/btn_sms"
+            android:textColor="#ffde8a"
+            android:textSize="@dimen/btn_item_sms_text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonSendMail"
+            android:layout_width="0dip"
+            android:layout_height="@dimen/h_btn_item_sms"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="@dimen/margin_lr_btn_item_sms"
+            android:layout_marginRight="@dimen/margin_lr_btn_item_sms"
+            android:layout_weight="1"
+            android:background="@drawable/indi_btn_detail"
+            android:gravity="center"
+            android:text="@string/btn_email"
+            android:textColor="#ffde8a"
+            android:textSize="@dimen/btn_item_sms_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sms_item_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/buttonLike"
+                android:layout_width="100dip"
+                android:layout_height="@dimen/h_btn_item_sms_top"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/indi_btn_detail"
+                android:gravity="center"
+                android:text="@string/btn_like"
+                android:textColor="#ffde8a"
+                android:textSize="@dimen/btn_item_sms_text_size_small"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/buttonCopyMessage"
+                android:layout_width="100dip"
+                android:layout_height="@dimen/h_btn_item_sms_top"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/indi_btn_detail"
+                android:gravity="center"
+                android:text="@string/btn_copy"
+                android:textColor="#ffde8a"
+                android:textSize="@dimen/btn_item_sms_text_size_small"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
