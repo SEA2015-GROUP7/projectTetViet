@@ -35,9 +35,6 @@ public class VideosActivity extends Activity
     VideoAdapter eventAdapter;
     GridView gridView;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
