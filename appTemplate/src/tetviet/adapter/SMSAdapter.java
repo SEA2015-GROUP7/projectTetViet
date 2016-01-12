@@ -2,6 +2,8 @@ package tetviet.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -17,6 +19,8 @@ import com.squareup.picasso.Picasso;
 import com.thefinestartist.ytpa.enums.Quality;
 import com.thefinestartist.ytpa.utils.YouTubeThumbnail;
 import com.thefinestartist.ytpa.utils.YouTubeUrlParser;
+
+
 
 
 
@@ -63,19 +67,19 @@ public class SMSAdapter extends BaseAdapter {
             holder.buttonShare.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					sendText(itemData.Message);
 				}
 			});
             holder.buttonSendSMS.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					sendSMS(itemData.Message);
 				}
 			});
             holder.buttonSendMail.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					
+					sendMail(itemData.Message);
 				}
 			});
             
@@ -94,6 +98,37 @@ public class SMSAdapter extends BaseAdapter {
 
 	public long getItemId(int position) {
 		return 0;
+	}
+	
+	public void sendSMS(String text) {
+//		MyLog.d("LoveSMS", text);
+		Intent smsIntent = new Intent(Intent.ACTION_VIEW);
+		smsIntent.putExtra("sms_body", text);
+		smsIntent.setType("vnd.android-dir/mms-sms");
+		mContext.startActivity(smsIntent);
+	}
+
+	public void sendMail(String content) {
+		Intent i = new Intent(Intent.ACTION_SENDTO);
+		i.setType("message/rfc822");
+		i.setData(Uri.parse("mailto:default@recipient.com"));
+		i.putExtra(Intent.EXTRA_SUBJECT, " ");
+		i.putExtra(Intent.EXTRA_TEXT, content);
+		try {
+			mContext.startActivity(Intent.createChooser(i, "Send mail..."));
+		} catch (android.content.ActivityNotFoundException ex) {
+//			Log.e("", ex.toString());
+		}
+	}
+
+	public void sendText(String type) {
+
+		// 1: sms. 2: email. 3: social
+		Intent sendIntent = new Intent();
+		sendIntent.setAction(Intent.ACTION_SEND);
+		sendIntent.putExtra(Intent.EXTRA_TEXT, type);
+		sendIntent.setType("text/plain");
+		mContext.startActivity(sendIntent);
 	}
 
 	static class ItemGridHolder {
