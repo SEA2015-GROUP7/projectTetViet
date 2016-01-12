@@ -118,25 +118,17 @@ public class DataBaseManager extends SQLiteOpenHelper {
 	 *             io exception
 	 */
 	private void createDataBase() {
-
 		boolean dbExist = checkDataBase();
 
 		if (dbExist) {
 			Logger.log(Log.DEBUG, tag, " do nothing - database already exist");
 		} else {
-
-			// By calling this method an empty database will be created into
-			// the default system path
-			// of your application so we are gonna be able to overwrite that
-			// database with our database.
-			// this.getReadableDatabase(Password);
 			Logger.log(Log.DEBUG, tag, "Create empty DB");
 			try {
 				copyDataBase();
 			} catch (IOException e) {
 				MyLog.d(e.toString());
 			}
-
 		}
 	}
 
@@ -146,9 +138,6 @@ public class DataBaseManager extends SQLiteOpenHelper {
 
 		try {
 			String myPath = DB_PATH + DB_NAME;
-			// checkDB = SQLiteDatabase.openDatabase(myPath,Password, null,
-			// SQLiteDatabase.OPEN_READONLY);
-
 			checkDB = SQLiteDatabase.openDatabase(myPath, null,
 					SQLiteDatabase.NO_LOCALIZED_COLLATORS);
 		} catch (SQLiteException e) {
@@ -163,52 +152,7 @@ public class DataBaseManager extends SQLiteOpenHelper {
 		return checkDB != null;
 	}
 
-	public void cloneDB() {
-
-		if (mDataBase != null) {
-			try {
-				List<SMSItem> SMSList = new ArrayList<SMSItem>();
-				String sql = "select * from TINNHAN";
-
-				Cursor cursor = mDataBase.rawQuery(sql, null);
-				if (cursor.moveToFirst()) {
-					do {
-						try {
-							SMSItem item = new SMSItem();
-							item.id = cursor.getString(cursor
-									.getColumnIndex("ID"));
-							item.Message = cursor.getString(cursor
-									.getColumnIndex("NOIDUNG"));
-							item.type = (cursor.getString(cursor
-									.getColumnIndex("LOAITINNHAN")));
-							item.Message = encrypt(item.Message);
-							// SMSList.add(item);
-							ContentValues values = new ContentValues();
-							Log.i("KIDO", "item.Message  " + item.Message);
-							values.put("NOIDUNG", item.Message);
-
-							mDataBase.update("TINNHAN", values, "ID='"
-									+ item.id + "'", null);
-
-							MyLog.d(item.toString());
-							// System.out.println(item.toString());
-						} catch (Exception e) {
-							Logger.log(Log.ERROR, tag, e.toString());
-						}
-					} while (cursor.moveToNext());
-				}
-				if (SMSList.size() > 0) {
-					return;
-				} else {
-					MyLog.d("Danh sach sms trong");
-				}
-			} catch (Exception e) {
-				Logger.log(Log.ERROR, tag, e.toString());
-			}
-			Logger.log(Log.INFO, tag, "Query SMSList from DB: Failed");
-		}
-		return;
-	}
+	
 
 	public String encrypt(String strToEncrypt) {
 
@@ -282,7 +226,7 @@ public class DataBaseManager extends SQLiteOpenHelper {
 			MyLog.d(e.toString());
 		}
 	}
-
+// open db file
 	private void openDataBase() throws SQLException {
 		String myPath = DB_PATH + DB_NAME;
 		try {
@@ -379,24 +323,18 @@ public class DataBaseManager extends SQLiteOpenHelper {
 
 	@Override
 	public synchronized void close() {
-
 		if (mDataBase != null)
 			mDataBase.close();
 
 		super.close();
-
 	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-		// TODO Auto-generated method stub
-
 	}
 
 	public List<SMSItem> select_SMS_LIST(int cateid) {
@@ -406,8 +344,7 @@ public class DataBaseManager extends SQLiteOpenHelper {
 		if (mDataBase != null) {
 			try {
 				List<SMSItem> SMSList = new ArrayList<SMSItem>();
-				String sql = "select * from TINNHAN" + " where LOAITINNHAN"
-						+ " = '" + "tet"+ "'";
+				String sql = "select * from TINNHAN";
 
 				Cursor cursor = mDataBase.rawQuery(sql, null);
 				if (cursor.moveToFirst()) {
