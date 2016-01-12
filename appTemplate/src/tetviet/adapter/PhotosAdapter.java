@@ -15,6 +15,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
+import tetviet.utils.LoggerFactory;
+
 public class PhotosAdapter extends BaseAdapter {
 	Context mContext;
 	List<ParseObject> mAppList;
@@ -48,6 +50,7 @@ public class PhotosAdapter extends BaseAdapter {
 
 
             Picasso.with(mContext).load(itemData.getString("PhotoUrl")).into(holder.imgThumb);
+            LoggerFactory.d("load photo" + itemData.getString("PhotoUrl"));
 		}
 
 		return gridView;

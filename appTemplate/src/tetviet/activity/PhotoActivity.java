@@ -59,7 +59,7 @@ public class PhotoActivity extends Activity
             }
         });
 
-        TextView title = (TextView)findViewById(R.id.tvTitle);
+//        TextView title = (TextView)findViewById(R.id.tvTitle);
     }
 
 
@@ -67,6 +67,7 @@ public class PhotoActivity extends Activity
     private void loadParseData(String Id){
         ParseQuery<ParseObject> query = ParseQuery.getQuery(EventTable);
         query.whereEqualTo("PhotoAlbumId", Id);
+        query.setLimit(50);
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> productParseList, com.parse.ParseException e) {

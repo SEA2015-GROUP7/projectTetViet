@@ -111,8 +111,12 @@ public class VideosActivity extends Activity
                 if (e == null) {
                     if(productParseList.size() > 0){
                         eventList.addAll(productParseList);
-                        eventAdapter = new VideoAdapter(mContext, eventList);
-                        gridView.setAdapter(eventAdapter);
+                        if(eventList != null && eventList.size() > 0){
+                        	eventAdapter = new VideoAdapter(mContext, eventList);
+                        	gridView.setAdapter(eventAdapter);
+                        }else{
+                        	
+                        }
                     }else{
                         Toast.makeText(mContext,"Danh sách trống", Toast.LENGTH_SHORT).show();
                     }

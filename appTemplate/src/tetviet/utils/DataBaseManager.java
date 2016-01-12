@@ -38,7 +38,7 @@ import android.util.Log;
 public class DataBaseManager extends SQLiteOpenHelper {
 	private static final long serialVersionUID1 = 0x6B6CFA521342FBF2L;
 	private String tag = DataBaseManager.class.getSimpleName();
-	private static String DB_PATH = "/data/data/com.nextapp.app.lovesms/databases/";
+	private static String DB_PATH = "/data/data/com.sea.tetviet/databases/";
 
 	// the name of your database
 	// private static String DB_NAME = "database.db";
