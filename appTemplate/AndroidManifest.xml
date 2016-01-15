@@ -11,6 +11,7 @@
     <application
         android:name="tetviet.activity.AppTetViet"
         android:allowBackup="true"
+        android:largeHeap="true"
         android:icon="@drawable/i_good_new"
         android:label="@string/app_name_lib"
         android:theme="@style/AppTheme" >

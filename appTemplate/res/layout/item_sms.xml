@@ -95,50 +95,5 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_sms_item_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:orientation="horizontal" >
-
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-
-            <Button
-                android:id="@+id/buttonLike"
-                android:layout_width="100dip"
-                android:layout_height="@dimen/h_btn_item_sms_top"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/indi_btn_detail"
-                android:gravity="center"
-                android:text="@string/btn_like"
-                android:textColor="#ffde8a"
-                android:textSize="@dimen/btn_item_sms_text_size_small"
-                android:textStyle="bold" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="0dip"
-            android:layout_height="match_parent"
-            android:layout_weight="1" >
-
-            <Button
-                android:id="@+id/buttonCopyMessage"
-                android:layout_width="100dip"
-                android:layout_height="@dimen/h_btn_item_sms_top"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/indi_btn_detail"
-                android:gravity="center"
-                android:text="@string/btn_copy"
-                android:textColor="#ffde8a"
-                android:textSize="@dimen/btn_item_sms_text_size_small"
-                android:textStyle="bold" />
-        </RelativeLayout>
-    </LinearLayout>
-
+    
 </RelativeLayout>

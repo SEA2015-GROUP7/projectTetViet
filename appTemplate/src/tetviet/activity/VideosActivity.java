@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubePlayer;
 import com.parse.FindCallback;
+import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.sea.tetviet.R;
@@ -55,18 +56,12 @@ public class VideosActivity extends Activity
     }
 
     private void initTopBar(){
-        RelativeLayout top_bar = (RelativeLayout) findViewById(R.id.top_bar);
-        top_bar.setVisibility(View.VISIBLE);
-
         findViewById(R.id.btnBarBack).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
             }
         });
-
-        TextView title = (TextView)findViewById(R.id.tvTitle);
-        title.setText("Videos");
     }
 
     private void openYoutubePlayer(String youUrl){
@@ -105,27 +100,51 @@ public class VideosActivity extends Activity
 
     private void loadParseData(){
         ParseQuery<ParseObject> query = ParseQuery.getQuery(tableName);
+        query.setLimit(10);
         query.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> productParseList, com.parse.ParseException e) {
-                if (e == null) {
-                    if(productParseList.size() > 0){
-                        eventList.addAll(productParseList);
-                        if(eventList != null && eventList.size() > 0){
+			
+			@Override
+			public void done(List<ParseObject> arg0, ParseException arg1) {
+				// TODO Auto-generated method stub
+				if (arg1 == null) {
+                    if(arg0.size() > 0){
+                        eventList.addAll(arg0);
+//                        if(eventList != null && eventList.size() > 0){
                         	eventAdapter = new VideoAdapter(mContext, eventList);
                         	gridView.setAdapter(eventAdapter);
-                        }else{
-                        	
-                        }
+//                        }else{
+//                        	
+//                        }
                     }else{
                         Toast.makeText(mContext,"Danh sách trống", Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    e.printStackTrace();
-                    LoggerFactory.e("loadParseData", "Error: " + e.getMessage());
+                	arg1.printStackTrace();
+                    LoggerFactory.e("loadParseData", "Error: " + arg1.getMessage());
                 }
-            }
-        });
+			}
+		});
+//        query.findInBackground(new FindCallback<ParseObject>() {
+//            @Override
+//            public void done(List<ParseObject> productParseList, com.parse.ParseException e) {
+//                if (e == null) {
+//                    if(productParseList.size() > 0){
+//                        eventList.addAll(productParseList);
+////                        if(eventList != null && eventList.size() > 0){
+//                        	eventAdapter = new VideoAdapter(mContext, eventList);
+//                        	gridView.setAdapter(eventAdapter);
+////                        }else{
+////                        	
+////                        }
+//                    }else{
+//                        Toast.makeText(mContext,"Danh sách trống", Toast.LENGTH_SHORT).show();
+//                    }
+//                } else {
+//                    e.printStackTrace();
+//                    LoggerFactory.e("loadParseData", "Error: " + e.getMessage());
+//                }
+//            }
+//        });
 
     }
 }

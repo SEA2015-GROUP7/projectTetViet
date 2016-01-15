@@ -12,6 +12,9 @@ public class AppTetViet extends Application {
 
     public static String ParseAppId = "c95nKO3sYXDeLIQ1BS3EWtlA2wU90nzBqNp1Qhek";
     public static String ParseClientKey = "c7qf0gwFZUtGX3SK8zdwlEnMIBXXhpH7v0eh6UJ6";
+    
+//    public static String ParseAppId = "UuYrK2ppCtqlfwyMlQ8eZT98JSgZ3D1qcZgZS7KF";
+//    public static String ParseClientKey = "hhnOmVDFKfynaXbaOhPqa37TOmwM6drCFCOoQQDw";
     public static final String fontPath = "Roboto-Light.ttf";
 	@Override
 	public void onCreate() {
