@@ -100,19 +100,19 @@ public class VideosActivity extends Activity
 
     private void loadParseData(){
         ParseQuery<ParseObject> query = ParseQuery.getQuery(tableName);
-        query.setLimit(10);
+//        query.setLimit(10);
         query.findInBackground(new FindCallback<ParseObject>() {
 			
 			@Override
 			public void done(List<ParseObject> arg0, ParseException arg1) {
-				// TODO Auto-generated method stub
 				if (arg1 == null) {
                     if(arg0.size() > 0){
                         eventList.addAll(arg0);
-//                        if(eventList != null && eventList.size() > 0){
+                        if(eventList != null && eventList.size() > 0){
                         	eventAdapter = new VideoAdapter(mContext, eventList);
                         	gridView.setAdapter(eventAdapter);
-//                        }else{
+                        }
+//                        	else{
 //                        	
 //                        }
                     }else{
