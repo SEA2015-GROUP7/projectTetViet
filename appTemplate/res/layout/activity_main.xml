@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/flash_bg_img"
     tools:context=".FreeApp_Activity" >
+  <include
+        android:id="@+id/topbar"
+        android:visibility="invisible"
+        layout="@layout/top_bar" />
 
     <GridView
         android:id="@+id/grid"
@@ -13,7 +17,7 @@
         android:layout_below="@+id/topbar"
         android:layout_centerInParent="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:columnWidth="200dp"
         android:fastScrollEnabled="true"
         android:gravity="center"
@@ -23,5 +27,13 @@
         android:padding="3dp"
         android:stretchMode="columnWidth"
         android:verticalSpacing="3dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_tet" />
 
 </RelativeLayout>

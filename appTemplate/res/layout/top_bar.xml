@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp" >
+
+    <View
+        android:id="@+id/viewtop"
+        android:layout_width="fill_parent"
+        android:layout_height="2px"
+        android:layout_alignParentTop="true"
+        android:background="#AD7754" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_topbar" >
+
+      
+      
+        
+    </RelativeLayout>
+
+</RelativeLayout>
