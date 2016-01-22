@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_item_list_1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="350dp" >
 
     <ImageView
         android:id="@+id/imgThumb"
@@ -24,7 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:text="Lam anh nen" />
+            android:text="Anh nen" />
          <Button
             android:id="@+id/buttonShare"
             android:layout_width="0dp"
