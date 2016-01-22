@@ -113,7 +113,7 @@ public final class MainActivity extends Activity {
     	
     	listMenu.add(new MainItem(0, MENU_MUSIC, "Nhạc tết", R.drawable.icon_music));
     	listMenu.add(new MainItem(0, MENU_VIDEO, "Phim tết", R.drawable.icon_phim));
-    	listMenu.add(new MainItem(0, MENU_PHOTO, "Anh tết", R.drawable.icon_photo));
-    	listMenu.add(new MainItem(0, MENU_SMS, "Chuc tết", R.drawable.icon_sms));
+    	listMenu.add(new MainItem(0, MENU_PHOTO, "Ảnh tết", R.drawable.icon_photo));
+    	listMenu.add(new MainItem(0, MENU_SMS, "Chúc tết", R.drawable.icon_sms));
     }
 }
