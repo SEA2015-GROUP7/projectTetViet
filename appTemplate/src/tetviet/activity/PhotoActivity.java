@@ -50,7 +50,7 @@ public class PhotoActivity extends Activity
     List<ParseObject> eventList = new LinkedList<ParseObject>();
     PhotosAdapter eventAdapter;
     GridView gridView;
-    String albumId = "";
+    String albumId = "1";
     File root;
 
 
@@ -63,11 +63,7 @@ public class PhotoActivity extends Activity
 				+ File.separator + "folder_name" + File.separator);
 		root.mkdirs();
 
-        Intent passData = getIntent();
-        if(passData != null){
-            albumId = passData.getStringExtra("ID");
-            loadParseData(albumId);
-        }
+         loadParseData(albumId);
 
         gridView = (GridView) findViewById(R.id.gridView);
         gridView.setOnItemClickListener(new OnItemClickListener() {

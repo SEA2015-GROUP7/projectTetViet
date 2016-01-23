@@ -31,7 +31,6 @@ import org.json.JSONObject;
 import com.sea.tetviet.R;
 
 public final class MainActivity extends Activity {
-    private MSharedPreferences mSharedPreferences;
     public static Context mContext;
     private List<MainItem> listMenu;
     MenuAdapter eventAdapter;
@@ -42,7 +41,6 @@ public final class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = this;
-        mSharedPreferences = MSharedPreferences.getInstance(mContext);
         mDB = DataBaseManager.instance();
         
         initMenu();
@@ -67,7 +65,6 @@ public final class MainActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				// TODO Auto-generated method stub
 				Intent toIntent = null;
 				MainItem item  = listMenu.get(arg2);
 				switch (item.MenuId) {
